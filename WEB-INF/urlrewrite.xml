@@ -1,0 +1,7 @@
+<rule>
+	<name>Canonical Hostnames</name>
+	<condition name="host" operator="notequal">^www.domain</condition>
+	<condition name="host" operator="notequal">^$</condition>
+	<from>^/(.*)</from>
+	<to type="redirect" last="true">http://www.domain/$1</to>
+</rule>
